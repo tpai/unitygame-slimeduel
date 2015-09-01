@@ -4,14 +4,12 @@ using System.Collections;
 public class CameraCenter : MonoBehaviour {
 
 	public float yOffset = 4f;
-	Camera cam;
 	Transform target1;
 	Transform target2;
 
 	void Start () {
-		cam = GetComponent<Camera> ();
-		target1 = GameObject.Find ("P1").transform;
-		target2 = GameObject.Find ("P2").transform;
+		target1 = GameObject.Find ("Player/P1").transform;
+		target2 = GameObject.Find ("Player/P2").transform;
 	}
 	
 	void FixedUpdate () {
@@ -28,6 +26,5 @@ public class CameraCenter : MonoBehaviour {
 			), 
 			Time.deltaTime * 5f
 		);
-		cam.orthographicSize = Mathf.Clamp (distance - 9f, 26f, 53f);
 	}
 }

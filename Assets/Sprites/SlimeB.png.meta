@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fb5558a9b6699427a9db306cf11ae842
-timeCreated: 1440339768
+timeCreated: 1441117924
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -25,17 +25,17 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: .25
     normalMapFilter: 0
-  isReadable: 1
+  isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
   cubemapConvolution: 0
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -58,61 +58,61 @@ TextureImporter:
     - name: SlimeB_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 240
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 30
+        y: 39
+        width: 181
+        height: 111
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SlimeB_1
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 240
-        height: 240
-      alignment: 0
+        x: 270
+        y: 39
+        width: 180
+        height: 121
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SlimeB_2
       rect:
         serializedVersion: 2
-        x: 480
-        y: 0
-        width: 240
-        height: 240
-      alignment: 0
+        x: 499
+        y: 39
+        width: 191
+        height: 111
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SlimeB_3
       rect:
         serializedVersion: 2
-        x: 720
-        y: 0
-        width: 240
-        height: 240
-      alignment: 0
+        x: 740
+        y: 39
+        width: 211
+        height: 111
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SlimeB_4
       rect:
         serializedVersion: 2
-        x: 960
-        y: 0
-        width: 240
-        height: 240
-      alignment: 0
+        x: 980
+        y: 39
+        width: 190
+        height: 141
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SlimeB_5
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 0
-        width: 240
-        height: 240
-      alignment: 0
+        x: 1211
+        y: 39
+        width: 219
+        height: 131
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

@@ -2,9 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Power : MonoBehaviour {
-
-	public string suffix = "P1";
+public class Power : HUDBase {
+	
 	public float nowPower = 0f;
 	public float minPower = 0f;
 	public float maxPower = 200f;
@@ -13,21 +12,23 @@ public class Power : MonoBehaviour {
 	bool isShooting = false;
 	bool decrMode = false;
 	Image img;
+	Player playerScript;
 
 	void Start () {
 		img = GetComponent<Image> ();
+		playerScript = GameObject.Find ("Player/"+suffix).GetComponent<Player> ();
 	}
 
 	void Update () {
 		if (!isShooting && Input.GetButtonDown ("Fire1_" + suffix)) {
 			isShooting = true;
-			GameObject.Find (suffix).GetComponent<Player> ().Attack ();
+			playerScript.Attack ();
 			nowPower = 0;
 		}
 
 		if (Input.GetButtonUp ("Fire1_" + suffix)) {
 			isShooting = false;
-			GameObject.Find (suffix).GetComponent<Player> ().Shoot (nowPower);
+			playerScript.Shoot (nowPower);
 		}
 	}
 

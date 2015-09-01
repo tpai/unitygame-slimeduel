@@ -18,14 +18,17 @@ public class Player : MonoBehaviour {
 		transform.name = suffix;
 		transform.position = GameObject.Find ("Spawn" + suffix).transform.position;
 		transform.rotation = GameObject.Find ("Spawn" + suffix).transform.rotation;
+
+		anim = GetComponentInChildren<Animator> ();
+		rigid = GetComponent<Rigidbody2D> ();
+		rigid.velocity = Vector3.zero;
+		
 	}
 
 	void Start () {
 		bomb.CreatePool (20);
 		sprite = transform.Find ("Sprite");
 		gunTop = transform.Find ("Sprite/GunTop");
-		anim = GetComponentInChildren<Animator> ();
-		rigid = GetComponent<Rigidbody2D> ();
 		rigid.centerOfMass = transform.up * -3f;
 	}
 
@@ -59,11 +62,12 @@ public class Player : MonoBehaviour {
 
 		GameObject obj = bomb.Spawn (gunTop.position, gunTop.rotation);
 		obj.transform.rotation = transform.rotation;
-		
+
 		if(anim.GetFloat("Horizontal")>0f)obj.transform.localScale = Vector3.one;
 		else obj.transform.localScale = new Vector3 (-1f, 1f, 1f);
 
-		obj.GetComponent<Rigidbody2D>().velocity = gunTop.up * force;
+		obj.GetComponent<Rigidbody2D> ().velocity = gunTop.up * force;
+		obj.GetComponent<Rigidbody2D> ().angularVelocity = Random.Range (50f, 100f);
 	}
 
 	void OnCollisionEnter2D (Collision2D coll) {
