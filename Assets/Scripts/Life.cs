@@ -5,8 +5,10 @@ using System.Collections;
 public class Life : HUDBase {
 
 	public int counter;
+	Transform player;
 
 	void Start () {
+		player = GameObject.Find ("Player/"+suffix).transform;
 		CheckLife ();
 	}
 
@@ -24,14 +26,20 @@ public class Life : HUDBase {
 					winner = life.suffix;
 				}
 			}
-
 			counter = 5;
 			PlayerPrefs.SetInt ("Life" + suffix, counter);
 
 			if (alive == 1) {
-				Application.LoadLevel (winner+"_Win");
-				return ;
+				PlayerPrefs.SetString ("Winner", winner);
+				Application.LoadLevel ("Win");
+				return;
 			}
+
+			Destroy (player.gameObject);
+		}
+		else {
+			player.GetComponent<Player> ().enabled = false;
+			player.GetComponent<Player> ().enabled = true;
 		}
 	}
 

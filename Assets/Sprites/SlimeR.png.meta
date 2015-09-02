@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0bf654613312144dda263547e34bc9bf
-timeCreated: 1441118145
+timeCreated: 1441206354
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,7 @@ TextureImporter:
     21300006: SlimeR_3
     21300008: SlimeR_4
     21300010: SlimeR_5
+    21300012: SlimeR_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -111,6 +112,16 @@ TextureImporter:
         x: 1211
         y: 40
         width: 219
+        height: 129
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeR_6
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 40
+        width: 180
         height: 129
       alignment: 7
       pivot: {x: 0, y: 0}

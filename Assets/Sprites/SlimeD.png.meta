@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: abc06adb14d3e44e489e9ce343842dc2
-timeCreated: 1441118158
+timeCreated: 1441206339
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,7 @@ TextureImporter:
     21300006: SlimeD_3
     21300008: SlimeD_4
     21300010: SlimeD_5
+    21300012: SlimeD_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -114,6 +115,16 @@ TextureImporter:
         height: 129
       alignment: 7
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeD_6
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 40
+        width: 219
+        height: 149
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

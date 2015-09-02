@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e909a50c73d884b0f8e50dfba58b53d3
-timeCreated: 1440302104
+timeCreated: 1441203649
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -56,40 +56,40 @@ TextureImporter:
     - name: Bomb_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 240
-        height: 240
+        x: 51
+        y: 59
+        width: 130
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Bomb_1
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 240
-        height: 240
+        x: 291
+        y: 59
+        width: 130
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Bomb_2
       rect:
         serializedVersion: 2
-        x: 480
-        y: 0
-        width: 240
-        height: 240
+        x: 531
+        y: 59
+        width: 130
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Bomb_3
       rect:
         serializedVersion: 2
-        x: 720
-        y: 0
-        width: 240
-        height: 240
+        x: 771
+        y: 59
+        width: 130
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
