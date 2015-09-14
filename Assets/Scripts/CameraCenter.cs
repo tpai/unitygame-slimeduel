@@ -22,8 +22,8 @@ public class CameraCenter : MonoBehaviour {
 //			target1.position, target2.position, distance
 //		);
 
-		Bounds bounds = new Bounds(targets[0].transform.position, Vector3.zero);
-		for (int i = 1; i < targets.Count; i++) {
+		Bounds bounds = new Bounds(transform.position, Vector3.zero);
+		for (int i = 0; i < targets.Count; i++) {
 			if (targets[i] != null)
 				bounds.Encapsulate (targets [i].transform.position); 
 		}
