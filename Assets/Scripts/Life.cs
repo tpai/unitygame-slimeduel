@@ -26,8 +26,6 @@ public class Life : HUDBase {
 					winner = life.suffix;
 				}
 			}
-			counter = 5;
-			PlayerPrefs.SetInt ("Life" + suffix, counter);
 
 			if (alive == 1) {
 				PlayerPrefs.SetString ("Winner", winner);

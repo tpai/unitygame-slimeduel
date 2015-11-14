@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Win : MonoBehaviour {
 
+	public Sprite[] sprites;
+
 	void Start () {
-		PlayerPrefs.SetInt ("LifeP1", 5);
-		PlayerPrefs.SetInt ("LifeP2", 5);
-		PlayerPrefs.SetInt ("LifeP3", 5);
-		PlayerPrefs.SetInt ("LifeP4", 5);
+		Destroy (GameObject.Find ("UI"));
+		int winner = int.Parse (PlayerPrefs.GetString ("Winner").Replace ("P", ""));
+		Debug.Log (winner);
+		GetComponent<Image> ().sprite = sprites [winner-1];
 	}
 
 	void Update () {
 		if (Input.anyKeyDown) {
-			Application.LoadLevel ("Main");
+			Application.LoadLevel ("Menu");
 		}
 	}
 }
