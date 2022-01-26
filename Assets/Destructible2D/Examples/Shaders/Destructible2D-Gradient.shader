@@ -1,3 +1,6 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Destructible 2D/Gradient"
 {
 	Properties
@@ -45,8 +48,8 @@ Shader "Destructible 2D/Gradient"
 				
 				void Vert(a2v i, out v2f o)
 				{
-					o.pos    = mul(UNITY_MATRIX_MVP, i.vertex);
-					o.height = mul(_Object2World, i.vertex).y;
+					o.pos    = UnityObjectToClipPos(i.vertex);
+					o.height = mul(unity_ObjectToWorld, i.vertex).y;
 				}
 				
 				void Frag(v2f i, out f2g o)

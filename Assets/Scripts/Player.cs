@@ -38,10 +38,11 @@ public class Player : MonoBehaviour {
 		if (h != 0f) {
 			rigid.velocity  = new Vector2 (fwdSpeed * h, rigid.velocity.y);
 		}
-		if (h > 0)
-			sprite.localScale = new Vector3 (-sprite.localScale.z, sprite.localScale.z, sprite.localScale.z);
-		else if (h < 0)
-			sprite.localScale = Vector3.one * sprite.localScale.z;
+		if (h > 0) {
+			transform.localScale = new Vector3 (-transform.localScale.z, transform.localScale.z, transform.localScale.z);
+		} else if (h < 0) {
+			transform.localScale = Vector3.one * transform.localScale.z;
+		}
 
 		anim.SetFloat ("Horizontal", Mathf.Abs(h));
 
@@ -57,14 +58,16 @@ public class Player : MonoBehaviour {
 	}
 
 	public void Shoot (float force) {
-
 		anim.SetTrigger ("Shoot");
 
 		GameObject obj = bomb.Spawn (gunTop.position, gunTop.rotation);
 		obj.transform.rotation = transform.rotation;
 
-		if(anim.GetFloat("Horizontal")>0f)obj.transform.localScale = Vector3.one;
-		else obj.transform.localScale = new Vector3 (-1f, 1f, 1f);
+		if(anim.GetFloat("Horizontal")>0f) {
+			obj.transform.localScale = Vector3.one;
+		} else {
+			obj.transform.localScale = new Vector3 (-1f, 1f, 1f);
+		}
 
 		obj.GetComponent<Rigidbody2D> ().velocity = gunTop.up * force;
 		obj.GetComponent<Rigidbody2D> ().angularVelocity = Random.Range (50f, 100f);
